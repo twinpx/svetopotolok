@@ -1,0 +1,41 @@
+﻿doctype html
+html
+  head
+    block title
+      title Svetopotolok
+      
+    include includes/meta.jade
+    include includes/styles.jade
+    include includes/scripts.jade
+    script( src="https://use.typekit.net/xzw6fwr.js" )
+    script try{Typekit.load({ async: true });}catch(e){}
+    
+  body
+    
+    section#indexPage( style="background-image: url( /template/images/index-bg.png );" )
+  
+      .b-container
+        header
+          .row
+            .col-xs-5
+              img#indexLogo( src="/template/images/logo-sp.svg" )
+            .col-xs-2.col-xs-offset-1 +7 (495) 150-27-50
+            .col-xs-4
+              b ОФИС 
+              | Москва, ул. Исаковского, дом 33, офис 4.50
+      
+        img#indexPhoto( src="/template/images/index-photo.png" alt="" )
+        
+        #indexLine
+        
+        #indexIll
+          #indexTitle.tk-univia-pro Светопотолок
+          #indexSlogan Технология световых панелей
+          #indexIllImg( style="background-image: url( /template/images/index-ill.png );" )
+          
+        footer
+          .row
+            .col-sm-6.col-sm-offset-2.col-xs-6
+              a( href="mailto:info@svetopotolok.ru" ) info@svetopotolok.ru
+            .col-sm-4.col-xs-6 Разработка 
+              a( href="http://twinpx.ru" target="_blank" ) Twin px
