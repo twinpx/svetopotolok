@@ -168,7 +168,50 @@
     opacity 1
     
 @keyframes show-title
-  0%
+  /*0%
     opacity 0
   100%
+    opacity 1*/
+  0%
+    -webkit-filter blur(12px)
+    filter blur(12px)
+    opacity 0
+    transform scale(1)
+  70%
+    -webkit-filter blur(0)
+    filter blur(0)
     opacity 1
+    text-shadow 0
+    transform scale(1)
+  85%
+    transform scale(1.05)
+    text-shadow 0 0 10px #fff
+    -webkit-filter blur(0)
+    filter blur(0)
+    opacity 1
+  100%
+    text-shadow 0
+    -webkit-filter blur(0)
+    filter blur(0)
+    opacity 1
+    transform scale(1)
+    
+@keyframes show-header
+  0%
+    opacity 0
+    -webkit-transform translateY(-100px)
+    transform translateY(-100px)
+  100%
+    opacity 1
+    -webkit-transform translateY(0)
+    transform:translateY(0)
+    
+@keyframes show-footer
+  0%
+    opacity 0
+    -webkit-transform translateY(100px)
+    transform translateY(100px)
+  100%
+    opacity 1
+    -webkit-transform translateY(0)
+    transform:translateY(0)

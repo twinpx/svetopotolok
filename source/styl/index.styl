@@ -1,13 +1,10 @@
 body
   background-color #2f2e2e
   color #666666
-  font-size 11pt
+  font-size 10.5pt
   
-.b-container
-  width 1366px
-  margin 0 auto
-  position relative
-  height 100vh
+  @media ( max-width: 1279px )
+    font-size 9pt
   
 #indexPage
   width 100vw
@@ -15,41 +12,60 @@ body
   background-repeat no-repeat
   background-position center
   background-size cover
-  position relative
   overflow hidden
+  
+#indexContainer
+  min-width 780px
+  width 100vw
+  height 100vh
+  position relative
   
 #indexPhoto
   position absolute
-  top 130px
-  left 288px
-  width 950px
+  top 50%
+  left 28%
+  width 59%
   height auto
   -webkit-animation flicker-in-1 2s linear both
   -moz-animation flicker-in-1 2s linear both
   animation flicker-in-1 2s linear both
   box-shadow 0 0 150px rgba( 255, 255, 255, 0.05 )
+  margin-top -19.5%
+    
+  @media screen and ( min-aspect-ratio 9/5 ), screen and ( max-height: 767px )
+  //@media ( max-height: 767px )
+    top 120px
+    margin-top 0
   
 #indexLine
   border-top 1px solid rgba( 255, 255, 255, 0.4 )
   position absolute
-  top 450px
-  left 127px
-  width 1100px
+  top 50%
+  left 13%
+  width 73%
   -webkit-animation slide-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 2s both
   -moz-animation slide-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 2s both
   animation slide-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 2s both
-  transform translateX(200%)
+  transform translateX(120%)
+    
+  @media screen and ( min-aspect-ratio 9/5 ), screen and ( max-height: 767px )
+    top 350px
   
 #indexIll
   position absolute
-  top 230px
-  left 127px
-  width 445px
+  top 50%
+  left 13%
+  margin-top -15%
+  width 30%
   -webkit-animation slide-left-ill 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 2.5s both
   -moz-animation slide-left-ill 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 2.5s both
   animation slide-left-ill 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 2.5s both
   transform translateX(-100%)
   opacity 0
+    
+  @media screen and ( min-aspect-ratio 9/5 ), screen and ( max-height: 767px )
+    top 150px
+    margin-top 0
     
 #indexIllImg
   padding-top 100%
@@ -62,48 +78,64 @@ body
   font-size 23pt
   position absolute
   top 21%
-  left 65px
-  font-family "univia-pro", serif
+  left 15%
+  //font-family "univia-pro", serif
   opacity 0
-  -webkit-animation show-title 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) 3s both
-  -moz-animation show-title 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) 3s both
-  animation show-title 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) 3s both
+  -webkit-animation show-title 1s linear 3s both
+  -moz-animation show-title 1s linear 3s both
+  animation show-title 1s linear 3s both
   
+  @media ( max-width: 1279px )
+    font-size 18pt
   
 #indexSlogan
   color #fff
   font-size 14pt
   position absolute
-  top 71%
-  left 65px
+  top 65%
+  left 15%
   opacity 0
   -webkit-animation show-title 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 3.5s both
   -moz-animation show-title 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 3.5s both
   animation show-title 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 3.5s both
+  
+  @media ( max-width: 1279px )
+    font-size 10.5pt
 
 #indexLogo
-  width 280px
+  width 70%
   margin 0 auto
   display block
   
 header
-  margin-top 20px
+  margin-top 10px
   color #fff
+  opacity 0
+  -webkit-animation show-header 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) 4s both
+  -moz-animation show-header 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) 4s both
+  animation show-header 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) 4s both
   
   b
     font-weight normal
+    font-size 7pt
     text-transform uppercase
     color #999
     
-  .col-xs-2,
-  .col-xs-4
-    margin-top 33px
+  .text-right
+    margin-top 3.5%
   
 footer
   position absolute
-  bottom 65px
+  bottom 55px
   left 0
   width 100%
+  opacity 0
+  -webkit-animation show-footer 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) 4s both
+  -moz-animation show-footer 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) 4s both
+  animation show-footer 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) 4s both
+  
+  @media screen and ( min-aspect-ratio 9/5 ), screen and ( max-height: 550px )
+    display none
   
 a
   color #fff
@@ -113,3 +145,6 @@ a
   &:focus
     color #fff
     text-decoration underline
+    
+.container
+  max-width 74% !important
